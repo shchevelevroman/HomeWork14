@@ -1,16 +1,10 @@
 public class Book {
-    private String name;
     private String bookName;
     private int yearPublication;
 
-    public Book(String name, String bookName, int yearPublication){
-        this.name = name;
+    public Book(String bookName, int yearPublication){
         this.yearPublication = yearPublication;
         this.bookName = bookName;
-    }
-
-    public String getName() {
-        return this.name;
     }
     public String getBookName(){
         return this.bookName;
