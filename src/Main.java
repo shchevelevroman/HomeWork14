@@ -1,19 +1,16 @@
 public class Main {
 
-    public static void printBook(String getName,String getFirstName, String getBookName, int getYearPublication){
-        System.out.println("Автор - " + getName + " " + getFirstName + " Название книги - " + getBookName + " Дата публикации - " + getYearPublication);
-    }
     public static void main(String[] args) {
 
-        Author tolstoy = new Author("Lev", "Tolstoy");
-        Book warAndPeas = new Book("War and Peas", 1865);
-        printBook(tolstoy.getName(), tolstoy.getFirstName(), warAndPeas.getBookName(), warAndPeas.getYearPublication());
+        Author author1 = new Author("Лев", "Толстой");
+        Author author2 = new Author("Александр", "Пушкин");
+        Book book1 = new Book("Война и мир", author1 , 1865);
+        System.out.println(book1);
         System.out.println("Корректировка даты публикации");
-        warAndPeas.setYearPublication(1869);
-        printBook(tolstoy.getName(), tolstoy.getFirstName(), warAndPeas.getBookName(), warAndPeas.getYearPublication());
-        Author pushkin = new Author("Aleksandr", "Pushkin");
-        Book evgeniiOnegin = new Book("Evgenii Onegin", 1825);
-        printBook(pushkin.getName(), pushkin.getFirstName(), evgeniiOnegin.getBookName(), evgeniiOnegin.getYearPublication());
+        book1.setYearPublication(1869);
+        System.out.println(book1);
+        Book book2 = new Book("Евгений Онегин", author2, 1825);
+        System.out.println(book2);
 
     }
 }
